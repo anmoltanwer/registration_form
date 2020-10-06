@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="form.css"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Noto+Sans+SC&display=swap" rel="stylesheet"/>
+        <title> Registaration Form </title>
+    </head>
+    <body>
+        <h1>Register Here</h1>
+        <form id ="form" >
+            <div id = "fnameDiv">
+                <lable> First Name:</lable><br>
+                <input id="first-name" class ="info-input" type ="text" name ="firt-name" placeholder= "First Name" onchange= 'showLastName()' required/><br>
+            </div>
+            <div id = "lnameDiv">    
+                <lable>Last Name:</lable><br>
+                <input id="last-name" class ="info-input" type ="text" name ="Last-name" placeholder= "Last Name" onchange= 'showEmail()' required/><br> 
+            </div> 
+            <div id = "emailDiv">      
+                <lable>Email:</lable><br>
+                <input id ="email" class ="info-input" type ="email" name ="email"placeholder= "Email" onchange= 'showNumber()' required/><br>
+            </div>    
+            <div id = "numDiv">
+                <lable> Phone Number:</lable><br>
+                <input id="phone"class ="info-input" type ="phone" name ="phone" placeholder= "Phone Number" maxlength ="10" minlength = '10' onchange= 'showPass()' required /><br>
+            </div>
+            <div id = "passDiv">    
+                <lable>Password:</lable><br>
+                <input class ="info-input" id = "password" type="password" name ="password" placeholder= "Password" pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onchange= 'showConfirmPass()' required /><br>
+            </div>  
+            <div id = "confirmPasDiv">  
+                <lable> Confirm Password:</lable><br>
+                <input class ="info-input" id ="confirmPas" type="password" name ="confirm password" placeholder= "Confirm password" onchange='showDOB()'  required /> <br>
+                <p id = 'wrongPass'>Password does not match</p>
+            </div>
+            <div id = "DOBDiv">    
+                <lable> Date of Birth:</lable><br>
+                <input class ="info-input" type="date" name ="DOB" placeholder= "Date of Birth" onclick = 'showBtn()'  required /><br>
+            </div>    
+            <input id ="btn" type ="submit" onclick ='checkPass()'/>
+        </form>
+    </body>
+    <script src = "form.js"></script>
+</html>
